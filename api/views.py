@@ -271,6 +271,8 @@ class UserListView(View):
             password=make_password(data['password'])
         )
         # user.set_password(data['password'])
+        
+        
         user.save()
 
         return JsonResponse(to_dict_user(user))
